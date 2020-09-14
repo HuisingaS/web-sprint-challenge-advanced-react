@@ -1,7 +1,5 @@
 import { useState } from "react";
 
-// write your custom hook here to control your checkout form
-//declate hook
 function useForm(initialValue){ 
     const [values, setValues] = useState(initialValue)
     const handleChanges = e => {
@@ -14,4 +12,4 @@ function useForm(initialValue){
     return [values, handleChanges];
   };
 
-  export default useForm;
+export default useForm;
