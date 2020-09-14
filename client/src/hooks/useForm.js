@@ -1,7 +1,8 @@
-// write your custom hook here to control your checkout form
 import { useState } from "react";
 
-export const useForm = (initialValue) => {
+// write your custom hook here to control your checkout form
+//declate hook
+function useForm(initialValue){ 
     const [values, setValues] = useState(initialValue)
     const handleChanges = e => {
         setValues({
@@ -9,6 +10,8 @@ export const useForm = (initialValue) => {
         [e.target.name]: e.target.value
       })
     }
-
+  
     return [values, handleChanges];
-  }; 
+  };
+
+  export default useForm;
